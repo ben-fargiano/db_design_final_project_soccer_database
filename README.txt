@@ -40,8 +40,8 @@ Players -> each record represents a player with a first_name, last_name, positio
 Goals -> each record represents a goal scored in a specific minute, game_id (foreign key, reference a record in "games" via "games.id"),  and roster_id (foreign key, references a record in "rosters" via "rosters.id"). Primary key is "id" (auto incrementing).
 
 
-User Interface Requirements:
-The user interface I have developed using Reactjs features the following screens:
+User Interface:
+The user interface I have developed using React.js features the following screens:
 - Owner-List : shows all owners in a list, links to Owner-Form-Editor and Owner-Teams-List
 - Owner-Form-Editor : CRUD screen that allows for editing an owner's attributes
 - OwnerTeam-List : shows all teams for a specific owner in a list, links to Team-Form-Editor, Player-List, Team-List, Owner-List
@@ -50,9 +50,13 @@ The user interface I have developed using Reactjs features the following screens
 - Player-List : shows all players in a list, links to Roster-Form-Editor, Goal-Leaderboard-List, PlayerTeam-List, Owner-List, Team-List, Player-Form-Editor
 - Player-Team-List : shows all teams associated with a given player in a list, links to Player-List, Team-List, League-List, Team-Form-Editor
 - Player-Form-Editor : CRUD screen that allows for editing an player's attributes
+- Roster-List : shows all roster items in a list, links to Roster-Form-Editor, Team-List, Owner-List, Player-List
+- Roster-Form-Editor : CRUD screen that allows for editing a roster item, links to Roster-List
 - Goal-Leaderboard-List : displays goal totals for each player, links to Goal-List, Goal-Form-Editor, Owner-List, Team-List, Player-List
-- Goal-List : shows a list of all goals, links to Goal-Leaderboad-List, Goal-Form-Editor, Owner-List, Team-List, Player-List, Player-Form-Editor
-- League-List : static list of Leagues (used as portable enumeration values in Teams table), links to Team-List and Player-List
+- Goal-List : shows a list of all goals, links to Goal-Leaderboard-List, Goal-Form-Editor, Owner-List, Team-List, Player-List, Player-Form-Editor, Game-Form-Editor
+- Game-Form-Editor : allows for editing of games, links to some other pages
+- League-List : list of Leagues (used as portable enumeration values in Teams table), links to Team-List, Player-List, and League-Team-List
+- LeagueTeam-List : list of Teams in a given League, links to Team-List, Owner-List Player-List, Team-Form-Editor
 
 
 -------------
@@ -131,10 +135,8 @@ Enumeration table: represents all allowable values for “league” in teams tab
 
 DROP TABLE IF EXISTS `epl_final_project`.`leagues`;
 CREATE TABLE `leagues` (
-	`id` int NOT NULL AUTO_INCREMENT,
 	`league` varchar(45) NOT NULL,
-	`country` varchar(45),
-PRIMARY KEY (`id`));
+PRIMARY KEY (`league`));
 
 INSERT INTO leagues (league, country)
 VALUES ("English Premier League", "England");
