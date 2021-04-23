@@ -54,6 +54,7 @@ The user interface I have developed using React.js features the following screen
 - Roster-Form-Editor : CRUD screen that allows for editing a roster item, links to Roster-List
 - Goal-Leaderboard-List : displays goal totals for each player, links to Goal-List, Goal-Form-Editor, Owner-List, Team-List, Player-List
 - Goal-List : shows a list of all goals, links to Goal-Leaderboard-List, Goal-Form-Editor, Owner-List, Team-List, Player-List, Player-Form-Editor, Game-Form-Editor
+- Goal-Player-List : shows a list of all goals scored by a given player, links to Goal-Leaderboard-List, Roster-Form-Editor, Goal-Form-Editor, Game-Form-Editor
 - Game-Form-Editor : allows for editing of games, links to some other pages
 - League-List : list of Leagues (used as portable enumeration values in Teams table), links to Team-List, Player-List, and League-Team-List
 - LeagueTeam-List : list of Teams in a given League, links to Team-List, Owner-List Player-List, Team-Form-Editor
