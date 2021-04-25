@@ -71,7 +71,7 @@ const TeamFormEditor = () => {
                 View Team Players
             </button>
             <button
-                onClick = {() => history.push(`/owners/${team.id}`)}
+                onClick = {() => history.push(`/owners/${team.owner_id}`)}
                 className="btn btn-primary">
                 Edit Team Owner
             </button>
