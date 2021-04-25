@@ -12,6 +12,8 @@ HOW TO RUN:
 3. Run "DemoApplication.java" in "src/main/java/DemoApplication"
 4. Open "http://localhost:63343/DemoApplication.java/spring-template/src/main/webapp/react/social/index.html?_ijt=t0bcc9grhnaifvqb9rcmkm3or2#/owners" in a browser (Chrome works well for me) and you can begin to use the application.
 
+In case something does not work as intended, the two video files included in this git repository show the application in action, performing CRUD operations with the SQL database.
+
 PROJECT DESCRIPTION:
 This project is a database of soccer players, rosters, teams, owners, goals, and some games. It allows for adding many Players to a single Team and adding Players to multiple Teams via a Rosters association class. It also utilizes portable enumeration twice, once in a "Leagues" field and once in a "Strongfoot" field. The most interesting part of this application (from a querying standpoint) is the inner-join query used to generate a the Goal Leaderboard (tabulates which players have scored the most goals by linking Players to Goals via the Rosters class. This application allows for all CRUD operations between Owners, Players, Teams, Rosters, and Goals.
 
