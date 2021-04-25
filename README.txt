@@ -4,6 +4,19 @@ Project Name: Soccer Roster Management Database
 Team Member: Ben Fargiano (working alone)
 CS 3200, Section 04
 
+------------------------------------
+
+HOW TO RUN:
+1. Download "db_design_final_project_database.zip" and import into SQL in a schema called "epl_final_project" with user "root" and password "cs3200". If files do not import correctly, use the given SQL scripts (the folder "db_create_statements") to create tables in SQL and input data.
+2. Download "db_design_final_project_application" folder and open it in an IDE (I used IntelliJ IDEA).
+3. Run "DemoApplication.java" in "src/main/java/DemoApplication"
+4. Open "http://localhost:63343/DemoApplication.java/spring-template/src/main/webapp/react/social/index.html?_ijt=t0bcc9grhnaifvqb9rcmkm3or2#/owners" in a browser (Chrome works well for me) and you can begin to use the application.
+
+PROJECT DESCRIPTION:
+This project is a database of soccer players, rosters, teams, owners, goals, and some games. It allows for adding many Players to a single Team and adding Players to multiple Teams via a Rosters association class. It also utilizes portable enumeration twice, once in a "Leagues" field and once in a "Strongfoot" field. The most interesting part of this application (from a querying standpoint) is the inner-join query used to generate a the Goal Leaderboard (tabulates which players have scored the most goals by linking Players to Goals via the Rosters class. This application allows for all CRUD operations between Owners, Players, Teams, Rosters, and Goals.
+
+------------------------------------
+
 Database Purpose: Store relationships between owners, teams, players, games, and goals with a rosters association class used to break up a many-to-many relationship between teams and players. A team can have multiple players, while a player can be on many teams (national team, club team). 
 I used two portable enumeration classes (strongfoot and league) to limit the values that could exist for players strongfoot (“left”, “right”, or “both”) and leagues (one of eight permissible leagues including “English Premier League”, “International”, “Serie A”, etc).
 I am a big fan of soccer (particular EPL and the other European Leagues) so I decided to use this project to create a database to manage aspects of soccer roster/game organization with a few basic DAOs.
@@ -139,20 +152,20 @@ CREATE TABLE `leagues` (
 	`league` varchar(45) NOT NULL,
 PRIMARY KEY (`league`));
 
-INSERT INTO leagues (league, country)
-VALUES ("English Premier League", "England");
-INSERT INTO leagues (league, country)
-VALUES ("EFL Championship", "England");
-INSERT INTO leagues (league, country)
-VALUES ("La Liga", "Spain");
-INSERT INTO leagues (league, country)
-VALUES ("Bundesliga", "Germany");
-INSERT INTO leagues (league, country)
-VALUES ("Serie A", "Italy");
-INSERT INTO leagues (league, country)
-VALUES ("Major League Soccer", "United States");
-INSERT INTO leagues (league, country)
-VALUES ("Liga MX", "Mexico");
+INSERT INTO leagues (league)
+VALUES ("English_Premier_League");
+INSERT INTO leagues (league)
+VALUES ("EFL_Championship");
+INSERT INTO leagues (league)
+VALUES ("La_Liga");
+INSERT INTO leagues (league)
+VALUES ("Bundesliga");
+INSERT INTO leagues (league)
+VALUES ("Serie_A");
+INSERT INTO leagues (league)
+VALUES ("Major_League_Soccer");
+INSERT INTO leagues (league)
+VALUES ("Liga_MX");
 INSERT INTO leagues (league)
 VALUES ("International");
 
