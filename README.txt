@@ -10,7 +10,7 @@ HOW TO RUN:
 1. Download "db_design_final_project_database.zip" and import into SQL in a schema called "epl_final_project" with user "root" and password "cs3200". If files do not import correctly, use the given SQL scripts (the folder "db_create_statements") to create tables in SQL and input data.
 2. Download "db_design_final_project_application" folder and open it in an IDE (I used IntelliJ IDEA).
 3. Run "DemoApplication.java" in "src/main/java/DemoApplication"
-4. Open "http://localhost:63343/DemoApplication.java/spring-template/src/main/webapp/react/social/index.html?_ijt=t0bcc9grhnaifvqb9rcmkm3or2#/owners" in a browser (Chrome works well for me) and you can begin to use the application.
+4. Open "http://localhost:63343/DemoApplication.java/spring-template/src/main/webapp/react/social/index.html" in a browser (Chrome works well for me) and you can begin to use the application.
 
 In case something does not work as intended, the two video files included in this git repository show the application in action, performing CRUD operations with the SQL database.
 
